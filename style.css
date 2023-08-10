@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+
+body {
+    background-color: rgb(8, 11, 35);
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    gap: 100px;
+}
+
+.titulo {
+    color: white;
+    font-family:'Rubik', sans-serif;
+    font-size: 50px;
+}
+
+/*CALCULADORA*/
+.calculadora {
+    width: 270px;
+    height: 360px;
+    color: white;  
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.calculadora input {
+    cursor: pointer;
+}
+
+/*SINAIS*/
+
+.adicao, .multiplicacao, .subtracao, .divisao, .botao {
+    border-radius: 30px;
+    width: 43px;
+    background-color: rgb(239, 144, 48);
+    color: white;
+    font-size: 30px;
+    padding: 0;
+    border:rgb(8, 11, 35);
+}
+.multiplicacao {
+    font-size: 25px;
+}
+
+/*LUGAR DAS CONTAS*/
+
+.placen {
+    height: 50px;
+    width: 190px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    margin:20px 20px 0px 20px ;
+}
+.valor1, .valor2, .sinal{
+    margin: 15px 10px 15px 20px;
+    font-size: 25px;
+}
+
+.sinal, .valor2 {
+    margin-left: 0px;
+}
+
+/*ALINHAMENTO*/
+
+.ponto {
+    grid-area: ponto;
+}
+
+.limpatela{
+    grid-area: ac;
+}
+.divisao {
+    grid-area: divisao;
+}
+.multiplicacao {
+    grid-area: multiplicacao;
+}
+.subtracao {
+    grid-area: subtracao;
+}
+.adicao {
+    grid-area: adicao;
+}
+.numeros .botao {
+    grid-area: resultado;
+}
+.zero {
+    grid-area: number0;
+}
+.number .n1 {
+    grid-area: number1;
+}
+.number .n2 {
+    grid-area: number2;
+}.number .n3 {
+    grid-area: number3;
+}.number .n4 {
+    grid-area: number4;
+}.number .n5 {
+    grid-area: number5;
+}.number .n6 {
+    grid-area: number6;
+}.number .n7 {
+    grid-area: number7;
+}.number .n8 {
+    grid-area: number8;
+}.number .n9 {
+    grid-area: number9;
+}
+
+.numeros {
+    display: grid;
+    grid-template-areas:"ac       ac     divisao multiplicacao"
+                         "number9 number8 number7 subtracao"
+                         "number6 number5 number4 adicao"
+                         "number3 number2 number1 resultado"
+                         "number0 number0 ponto resultado";
+    width: 220px;
+    gap: 10px;
+}
+
+.number:not(.zero){
+    border-radius: 50px;
+    height: 43px;
+    width: 43px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(96, 96, 96);
+    cursor: pointer;
+    border: rgb(8, 11, 35);
+}
+.zero {
+    border-radius: 50px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(96, 96, 96);
+    cursor: pointer;
+    border: rgb(8, 11, 35);
+}
+
+.number:hover {
+    transition: 0.8s;
+    background-color: rgb(147, 145, 145);
+}
+
+.ajustadora {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/*C*/
+
+.limpatela {
+    height: 43px;
+    background-color: red;
+    border:red;
+    color: white;
+    border-radius:60px;
+    font-size: 20px;
+}
